@@ -1,0 +1,12 @@
+.owl-carousel .owl-item img{
+    width: unset;
+}
+#about-card .owl-theme .owl-nav{
+    margin-top: 0;
+    height: 0;
+}
+#about-card .owl-theme .owl-nav [class*=owl-], .owl-theme .owl-nav [class*=owl-]:hover {
+    background: unset;
+    padding: 0;
+    margin: 0;
+}

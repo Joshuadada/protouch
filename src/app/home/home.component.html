@@ -1,30 +1,5 @@
-<nav
-  class="bg-[#4D1600] h-20 hidden md:flex justify-between items-center px-14 sticky top-0 left-0 right-0 z-20"
->
-  <div class="text-white">ProTouch Groups</div>
-  <div class="flex items-center space-x-5">
-    <a href="#about" class="text-[#FFFEFE] cursor-pointer text-sm">ABOUT US</a>
-    <a href="#testimonials" class="text-[#FFFEFE] cursor-pointer text-sm"
-      >TESTIMONIALS</a
-    >
-    <a
-      class="text-[#FFFEFE] cursor-pointer bg-[#AE3200] hover:bg-[#661D00] py-3 px-5 rounded text-sm"
-      href="#contact"
-    >
-      CONTACT US
-    </a>
-  </div>
-</nav>
-<nav
-  class="bg-[#4D1600] h-14 flex justify-between items-center md:hidden px-6 sticky top-0 left-0 right-0 z-20"
->
-  <div class="text-white">ProTouch Groups</div>
-  <div class="cursor-pointer">
-    <img src="../../assets/icons/menu.png" alt="" />
-  </div>
-</nav>
 <header
-  class="hidden md:grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-5rem)] md:h-[unset] lg:h-[calc(100vh-5rem)] md:max-h-[calc(100vh-5rem)] lg:max-h-[none]"
+  class="hidden md:grid grid-cols-1 md:grid-cols-2 h-screen md:h-[unset] lg:h-screen md:max-h-screen lg:max-h-[none]"
 >
   <div class="relative overflow-hidden">
     <div class="">
@@ -85,7 +60,7 @@
     </div>
   </div>
 </header>
-<header class="grid grid-cols-1 md:hidden h-[calc(75vh-3.5rem)]">
+<header class="grid grid-cols-1 md:hidden h-screen">
   <div class="relative overflow-hidden">
     <div class="">
       <owl-carousel-o [options]="mobileHeader">
@@ -322,48 +297,3 @@
     </button>
   </section>
 </div>
-<footer class="p-10 mt-20 pb-2 md:p-20 md:pb-5 bg-[#4C1600]">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap:8 md:gap-10">
-    <div class="">
-      <h3 class="text-white text-xl md:text-2xl">ProTouch</h3>
-      <p class="text-white my-5 font-light">
-        Land behold it created good saw after she'd Our set living. Signs midst
-        dominion creepeth morning laboris nisi ufsit aliquip
-      </p>
-      <div class="flex gap-3 mb-5">
-        <a href="">
-          <img src="../../assets/icons/facebook.png" alt="" />
-        </a>
-        <a href="">
-          <img src="../../assets/icons/facebook.png" alt="" />
-        </a>
-        <a href="">
-          <img src="../../assets/icons/facebook.png" alt="" />
-        </a>
-        <a href="">
-          <img src="../../assets/icons/facebook.png" alt="" />
-        </a>
-      </div>
-    </div>
-    <div class="">
-      <h3 class="text-white text-xl md:text-2xl">Quick Links</h3>
-      <div class="text-white my-5 font-light flex flex-col gap-3">
-        <a href="#" class="block">Home</a>
-        <a href="#about" class="block">About</a>
-        <a href="#service" class="block">Services</a>
-        <a href="#contact" class="block">Contact</a>
-      </div>
-    </div>
-    <div class="">
-      <h3 class="text-white text-xl md:text-2xl">Contact us</h3>
-      <div class="flex flex-col gap-3 my-5">
-        <p class="text-white font-light">85 Avenue, Shagamu, Street,</p>
-        <p class="font-semibold text-white">+234 904 331 3214</p>
-      </div>
-    </div>
-  </div>
-  <p class="text-center text-white mt-5 text-sm">
-    Copyright &copy;{{ date.getFullYear() }} All Rights Reserved | ProTouch
-    Groups
-  </p>
-</footer>
