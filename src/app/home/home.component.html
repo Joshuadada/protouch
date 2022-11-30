@@ -1,5 +1,5 @@
 <nav
-  class="bg-[#4D1600] h-20 flex justify-between items-center px-14 sticky top-0 left-0 right-0 z-20"
+  class="bg-[#4D1600] h-20 hidden md:flex justify-between items-center px-14 sticky top-0 left-0 right-0 z-20"
 >
   <div class="text-white">ProTouch Groups</div>
   <div class="flex items-center space-x-5">
@@ -15,13 +15,23 @@
     </a>
   </div>
 </nav>
-<header class="grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-5rem)]">
+<nav
+  class="bg-[#4D1600] h-14 flex justify-between items-center md:hidden px-6 sticky top-0 left-0 right-0 z-20"
+>
+  <div class="text-white">ProTouch Groups</div>
+  <div class="cursor-pointer">
+    <img src="../../assets/icons/menu.png" alt="" />
+  </div>
+</nav>
+<header
+  class="hidden md:grid grid-cols-1 md:grid-cols-2 h-[calc(100vh-5rem)] md:h-[unset] lg:h-[calc(100vh-5rem)] md:max-h-[calc(100vh-5rem)] lg:max-h-[none]"
+>
   <div class="relative overflow-hidden">
-    <div class="rotate-180">
-      <owl-carousel-o [options]="customOptions2">
+    <div class="">
+      <owl-carousel-o [options]="hotelHeader">
         <ng-container *ngFor="let images of imagesStore">
           <ng-template carouselSlide [id]="images.id">
-            <div class="h-full -rotate-180">
+            <div class="h-full">
               <img [src]="images.src" class="object-cover" />
             </div>
           </ng-template>
@@ -32,22 +42,22 @@
       class="flex items-center justify-center text-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10"
     >
       <div class="w-64 mx-auto">
-        <div class="font-thin text-sm text-white">HOTEL AND RESORT</div>
-        <div class="text-3xl font-bold my-7 text-white">
+        <p class="font-thin text-sm text-white">DISCOVER NOW</p>
+        <h2 class="text-2xl md:text-3xl font-bold my-8 text-white">
           Welcome to Protouch Hotel and Resort
-        </div>
-        <div
-          class="bg-[#FFFEFE] w-40 mx-auto cursor-pointer text-center text-[#E44200] py-3 px-5 rounded"
+        </h2>
+        <button
+          class="bg-[#FFFEFE] w-52 mx-auto cursor-pointer text-center text-[#E44200] py-3 px-5 rounded"
           routerLink="/hotel"
         >
-          Discover Now
-        </div>
+          Hotel and Suites
+        </button>
       </div>
     </div>
   </div>
   <div class="relative overflow-hidden">
     <div class="">
-      <owl-carousel-o [options]="customOptions3">
+      <owl-carousel-o [options]="cakeHeader">
         <ng-container *ngFor="let images of imagesStore2">
           <ng-template carouselSlide [id]="images.id">
             <div class="h-full">
@@ -61,35 +71,91 @@
       class="flex items-center justify-center text-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10"
     >
       <div class="w-64 mx-auto">
-        <div class="font-thin text-sm text-white">CAKES AND PASTRIES</div>
-        <div class="text-3xl font-bold my-7 text-white">
+        <p class="font-thin text-sm text-white">DISCOVER NOW</p>
+        <h2 class="text-2xl md:text-3xl font-bold my-8 text-white">
           Welcome to Protouch Cakes and Pastries
-        </div>
-        <div
-          class="text-[#FFFEFE] w-40 mx-auto cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
+        </h2>
+        <button
+          class="text-[#FFFEFE] w-52 mx-auto cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
           routerLink="/cake"
         >
-          Discover Now
-        </div>
+          Cakes and Pastries
+        </button>
       </div>
     </div>
   </div>
 </header>
+<header class="grid grid-cols-1 md:hidden h-[calc(75vh-3.5rem)]">
+  <div class="relative overflow-hidden">
+    <div class="">
+      <owl-carousel-o [options]="mobileHeader">
+        <ng-container>
+          <ng-template carouselSlide>
+            <div class="relative">
+              <div class="h-full">
+                <img src="../../assets/home/header-1.png" class="object-cover" />
+              </div>
+              <div
+                class="flex items-center justify-center text-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10"
+              >
+                <div class="w-64 mx-auto">
+                  <p class="font-thin text-sm text-white">HOTEL AND RESORT</p>
+                  <h2 class="text-2xl md:text-3xl font-bold my-7 text-white">
+                    Welcome to Protouch Hotel and Resort
+                  </h2>
+                  <button
+                    class="text-[#FFFEFE] w-40 mx-auto cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
+                    routerLink="/hotel"
+                  >
+                    Discover Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="relative">
+              <div class="h-full">
+                <img src="../../assets/home/header-2.png" class="object-cover" />
+              </div>
+              <div
+                class="flex items-center justify-center text-center absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-10"
+              >
+                <div class="w-64 mx-auto">
+                  <p class="font-thin text-sm text-white">CAKES AND PASTRIES</p>
+                  <h2 class="text-2xl md:text-3xl font-bold my-7 text-white">
+                    Welcome to Protouch Cakes and Pastries
+                  </h2>
+                  <button
+                    class="text-[#FFFEFE] w-40 mx-auto cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
+                    routerLink="/cake"
+                  >
+                    Discover Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</header>
 <section
-  class="p-10 md:p-20 mt-10 md:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+  class="p-5 sm:p-8 md:p-20 mt-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
   id="about"
 >
   <div>
-    <div class="text-[#661D00] font-semibold">ABOUT US</div>
-    <div class="font-bold text-3xl w-3/4 my-7">
+    <h3 class="text-[#661D00] font-semibold">ABOUT US</h3>
+    <h2 class="font-bold text-2xl md:text-3xl w-3/4 my-7">
       Welcome To Pretouch Hotel and Cakes
-    </div>
-    <div class="mb-5">
+    </h2>
+    <p class="mb-5">
       With over 340 Hotels Worldwide and 560 Bakeries, Pretouch Hotel has
       offered a wide variety of audience accross quality and premium service at
       a very affordable price.
-    </div>
-    <div>Manager: <span class="text-[#661D00]">Chimanda Emeka</span></div>
+    </p>
+    <p>Manager: <span class="text-[#661D00]">Chimanda Emeka</span></p>
   </div>
   <div class="flex gap-3">
     <div class="w-1/2 flex flex-col justify-between gap-3">
@@ -105,8 +171,8 @@
     </div>
   </div>
 </section>
-<div class="relative about-2 my-10 md:my-20">
-  <owl-carousel-o [options]="customOptions">
+<div class="relative about-2 my-20" id="service">
+  <owl-carousel-o [options]="serviceCarousel">
     <ng-template carouselSlide>
       <section class="grid grid-cols-1 md:grid-cols-2">
         <div class="max-h-[520px]">
@@ -118,33 +184,33 @@
         </div>
         <div class="bg-[#631C00] flex items-center p-5 sm:p-8 md:p-16 relative">
           <div>
-            <div class="text-white text-3xl">Premium King Room</div>
-            <div class="text-[#FF4C04] text-lg font-semibold">
+            <h2 class="text-white text-2xl md:text-3xl">Premium King Room</h2>
+            <p class="text-[#FF4C04] text-lg font-semibold">
               230$ <span class="text-white text-base font-normal">/ Day</span>
-            </div>
+            </p>
             <div class="text-white my-12">
               <div class="flex mb-2">
-                <div class="w-24">Size</div>
-                <div class="flex-1">: 30 ft</div>
+                <p class="w-24">Size</p>
+                <p class="flex-1">: 30 ft</p>
               </div>
               <div class="flex mb-2">
-                <div class="w-24">Capacity</div>
-                <div class="flex-1">: Max person 5</div>
+                <p class="w-24">Capacity</p>
+                <p class="flex-1">: Max person 5</p>
               </div>
               <div class="flex mb-2">
-                <div class="w-24">Bed</div>
-                <div class="flex-1">: King Beds</div>
+                <p class="w-24">Bed</p>
+                <p class="flex-1">: King Beds</p>
               </div>
               <div class="flex">
-                <div class="w-24">Services</div>
-                <div class="flex-1">: Wifi, Television, Bathroom</div>
+                <p class="w-24">Services</p>
+                <p class="flex-1">: Wifi, Television, Bathroom</p>
               </div>
             </div>
-            <div
+            <button
               class="text-[#FFFEFE] w-40 cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
             >
               View Details
-            </div>
+            </button>
           </div>
         </div>
       </section>
@@ -160,113 +226,144 @@
         </div>
         <div class="bg-[#631C00] flex items-center p-5 sm:p-8 md:p-16">
           <div>
-            <div class="text-white text-3xl">Premium King Room</div>
-            <div class="text-[#FF4C04] text-lg font-semibold">
+            <h2 class="text-white text-2xl md:text-3xl">Premium King Room</h2>
+            <p class="text-[#FF4C04] text-lg font-semibold">
               230$ <span class="text-white text-base font-normal">/ Day</span>
-            </div>
+            </p>
             <div class="text-white my-12">
               <div class="flex mb-2">
-                <div class="w-24">Size</div>
-                <div class="flex-1">: 30 ft</div>
+                <p class="w-24">Size</p>
+                <p class="flex-1">: 30 ft</p>
               </div>
               <div class="flex mb-2">
-                <div class="w-24">Capacity</div>
-                <div class="flex-1">: Max person 5</div>
+                <p class="w-24">Capacity</p>
+                <p class="flex-1">: Max person 5</p>
               </div>
               <div class="flex mb-2">
-                <div class="w-24">Bed</div>
-                <div class="flex-1">: King Beds</div>
+                <p class="w-24">Bed</p>
+                <p class="flex-1">: King Beds</p>
               </div>
               <div class="flex">
-                <div class="w-24">Services</div>
-                <div class="flex-1">: Wifi, Television, Bathroom</div>
+                <p class="w-24">Services</p>
+                <p class="flex-1">: Wifi, Television, Bathroom</p>
               </div>
             </div>
-            <div
+            <button
               class="text-[#FFFEFE] w-40 cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
             >
               View Details
-            </div>
+            </button>
           </div>
         </div>
       </section>
     </ng-template>
   </owl-carousel-o>
 </div>
-<div class="p-10 md:p-20 testimonial" id="testimonials">
-  <owl-carousel-o [options]="customOptions4">
+<div class="p-5 sm:p-8 md:p-20 testimonial" id="testimonials">
+  <owl-carousel-o [options]="testimonialsCarousel">
     <ng-template carouselSlide>
       <div class="">
-        <section class="grid grid-cols-1 sm:flex gap-8 items-center px-12">
+        <section class="grid grid-cols-1 sm:flex gap-8 items-center md:px-12">
           <div class="sm:w-1/2 md:w-1/4">
             <img src="../../assets/home/img-5.png" class="w-full" alt="" />
           </div>
           <div class="sm:w-1/2 md:w-3/4">
-            <div class="text-[#661D00] font-semibold">Testimonials</div>
-            <div class="font-bold text-3xl w-3/4 my-7">
+            <h3 class="text-[#661D00] font-semibold">Testimonials</h3>
+            <h2 class="font-bold text-2xl md:text-3xl w-3/4 my-7">
               Our Customers Love Us
-            </div>
-            <div class="mb-5">
+            </h2>
+            <p class="mb-5">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
               officiis ipsum sed placeat? Obcaecati id sit, dolorum qui maxime
               ex consequatur
-            </div>
+            </p>
           </div>
         </section>
       </div>
     </ng-template>
     <ng-template carouselSlide>
       <div class="">
-        <section class="grid grid-cols-1 sm:flex gap-8 items-center px-12">
+        <section class="grid grid-cols-1 sm:flex gap-8 items-center md:px-12">
           <div class="sm:w-1/2 md:w-1/4">
             <img src="../../assets/home/img-5.png" class="w-full" alt="" />
           </div>
           <div class="sm:w-1/2 md:w-3/4">
-            <div class="text-[#661D00] font-semibold">Testimonials</div>
-            <div class="font-bold text-3xl w-3/4 my-7">
+            <h3 class="text-[#661D00] font-semibold">Testimonials</h3>
+            <h2 class="font-bold text-2xl md:text-3xl w-3/4 my-7">
               Our Customers Love Us
-            </div>
-            <div class="mb-5">
+            </h2>
+            <p class="mb-5">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam
               officiis ipsum sed placeat? Obcaecati id sit, dolorum qui maxime
               ex consequatur
-            </div>
+            </p>
           </div>
         </section>
       </div>
     </ng-template>
   </owl-carousel-o>
 </div>
-<div class="m-10 md:m-20 p-10" id="contact">
-  <section class="flex items-center justify-between relative z-10">
+<div class="m-0 my-10 md:my-[unset] md:m-20 p-10" id="contact">
+  <section
+    class="flex flex-col sm:flex-row gap-10 md:items-center justify-between relative z-10"
+  >
     <div>
-      <div class="font-bold text-3xl text-white mb-2">Contact Us now!</div>
-      <div class="text-[#D9D9D9]">
+      <h3 class="font-bold text-2xl md:text-3xl text-white mb-2">
+        Contact Us now!
+      </h3>
+      <p class="text-[#D9D9D9]">
         Contact (+234 904 554 221) to book directly or for advice
-      </div>
+      </p>
     </div>
-    <div
+    <button
       class="text-[#FFFEFE] w-40 cursor-pointer text-center bg-[#E44200] py-3 px-5 rounded"
     >
       Contact Us
-    </div>
+    </button>
   </section>
 </div>
-<section class="p-10 md:p-20 bg-[#4C1600]">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap:5 md:gap-10">
+<footer class="p-10 mt-20 pb-2 md:p-20 md:pb-5 bg-[#4C1600]">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap:8 md:gap-10">
     <div class="">
-      <div>ProTouch</div>
-      <div>
+      <h3 class="text-white text-xl md:text-2xl">ProTouch</h3>
+      <p class="text-white my-5 font-light">
         Land behold it created good saw after she'd Our set living. Signs midst
         dominion creepeth morning laboris nisi ufsit aliquip
-      </div>
-      <div>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
+      </p>
+      <div class="flex gap-3 mb-5">
+        <a href="">
+          <img src="../../assets/icons/facebook.png" alt="" />
+        </a>
+        <a href="">
+          <img src="../../assets/icons/facebook.png" alt="" />
+        </a>
+        <a href="">
+          <img src="../../assets/icons/facebook.png" alt="" />
+        </a>
+        <a href="">
+          <img src="../../assets/icons/facebook.png" alt="" />
+        </a>
       </div>
     </div>
-    <div class="">jjgahjkf</div>
-    <div class="">jhhkljasa</div>
+    <div class="">
+      <h3 class="text-white text-xl md:text-2xl">Quick Links</h3>
+      <div class="text-white my-5 font-light flex flex-col gap-3">
+        <a href="#" class="block">Home</a>
+        <a href="#about" class="block">About</a>
+        <a href="#service" class="block">Services</a>
+        <a href="#contact" class="block">Contact</a>
+      </div>
+    </div>
+    <div class="">
+      <h3 class="text-white text-xl md:text-2xl">Contact us</h3>
+      <div class="flex flex-col gap-3 my-5">
+        <p class="text-white font-light">85 Avenue, Shagamu, Street,</p>
+        <p class="font-semibold text-white">+234 904 331 3214</p>
+      </div>
+    </div>
   </div>
-</section>
+  <p class="text-center text-white mt-5 text-sm">
+    Copyright &copy;{{ date.getFullYear() }} All Rights Reserved | ProTouch
+    Groups
+  </p>
+</footer>

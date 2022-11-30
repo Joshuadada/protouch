@@ -14,6 +14,10 @@
 .testimonial .owl-theme {
     position: relative;
 }
+
+.testimonial .owl-theme .owl-nav{
+    display: none;
+}
 .testimonial .owl-theme .owl-nav [class*=owl-], .owl-theme .owl-nav [class*=owl-]:hover {
     background: unset;
     // display: none;
@@ -30,6 +34,9 @@
 }
 @media (min-width: 768px) {
     .about-2 .owl-theme .owl-nav{
+        display: block;
+    }
+    .testimonial .owl-theme .owl-nav{
         display: block;
     }
 }

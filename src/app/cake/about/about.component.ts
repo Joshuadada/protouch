@@ -1,14 +1,13 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-cake',
-  templateUrl: './cake.component.html',
-  styleUrls: ['./cake.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss']
 })
-export class CakeComponent implements OnInit {
+export class AboutComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit(): void {
@@ -67,4 +66,5 @@ export class CakeComponent implements OnInit {
     },
     nav: true
   }
+
 }

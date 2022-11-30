@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  date = new Date()
   imagesStore = [
     {
       id: '1',
@@ -47,7 +48,7 @@ export class HomeComponent implements OnInit {
 
     }
   ]
-  customOptions: OwlOptions = {
+  serviceCarousel: OwlOptions = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
@@ -64,7 +65,7 @@ export class HomeComponent implements OnInit {
     },
     nav: true
   }
-  customOptions2: OwlOptions = {
+  hotelHeader: OwlOptions = {
     loop: true,
     
     mouseDrag: true,
@@ -74,6 +75,7 @@ export class HomeComponent implements OnInit {
     navSpeed: 700,
     autoplay: true,
     autoplaySpeed: 700,
+    rtl: true,
     navText: ['<div class="bg-[#FFFEFE] w-32 cursor-pointer text-center text-[#E44200] py-2 px-3 text-sm">Previous</div>', '<div class="text-[#FFFEFE] w-32 cursor-pointer text-center bg-[#E44200] py-2 px-3 text-sm">Next</div> '],
     responsive: {
       0: {
@@ -82,7 +84,7 @@ export class HomeComponent implements OnInit {
     },
     nav: false,
   }
-  customOptions3: OwlOptions = {
+  cakeHeader: OwlOptions = {
     loop: true,
     
     mouseDrag: true,
@@ -100,7 +102,25 @@ export class HomeComponent implements OnInit {
     },
     nav: false
   }
-  customOptions4: OwlOptions = {
+  mobileHeader: OwlOptions = {
+    loop: true,
+    
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    autoplay: true,
+    autoplaySpeed: 700,
+    navText: ['<div class="bg-[#FFFEFE] w-32 cursor-pointer text-center text-[#E44200] py-2 px-3 text-sm">Previous</div>', '<div class="text-[#FFFEFE] w-32 cursor-pointer text-center bg-[#E44200] py-2 px-3 text-sm">Next</div> '],
+    responsive: {
+      0: {
+        items: 1
+      },
+    },
+    nav: false
+  }
+  testimonialsCarousel: OwlOptions = {
     loop: true,
     
     mouseDrag: true,
